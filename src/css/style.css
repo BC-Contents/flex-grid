@@ -22,6 +22,10 @@ h1 {
 .cards-container {
     max-width: 1200px;
     margin: 0 auto;
+    /* Flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
@@ -30,6 +34,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
     overflow: hidden;
+    flex: 1 1 250px;
 }
 
 .card-image {
@@ -54,4 +59,13 @@ h1 {
 .card-content p {
     color: #666;
     line-height: 1.5;
+}
+
+@media (max-width:992px){
+    .cards-container{
+        flex-direction: column;
+        .card{
+            flex: 1 1 auto;
+        }
+    }
 }
